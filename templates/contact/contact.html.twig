@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ parent()}}
+	- Contact
+{% endblock %}
+
+{% block body %}
+{{parent()}}
+	<div class="container">
+		<div class="row justify-content-center">
+			<h1 class="text-center text-primary p-4">Contact</h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 bg-white p-4 m-0 text-primary">
+				{{ form_start(form) }}
+				<div class="form-group">
+					{{ form_label(form.name, 'Votre nom (*) ', {'label_attr': {'class': 'font-weight-bold'}}) }}
+					{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(form.email, 'Votre adresse de messagerie (*) ', {'label_attr': {'class': 'font-weight-bold'}}) }}
+					{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(form.subject, 'Objet (*)', {'label_attr': {'class': 'font-weight-bold'}})}}
+					{{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+				</div>
+				<div class="form-group">
+					{{ form_label(form.message, 'Votre message (*)', {'label_attr': {'class': 'font-weight-bold'}}) }}
+					{{ form_widget(form.message, {'attr': {'class': 'form-control','rows':'7','cols':'7'}}) }}
+				</div>
+				<div class="form-group mx-auto text-center">
+					{{ form_widget(form.send, { 'label': "Envoyer", 'attr': {'class': 'btn font-weight-bold bg-primary text-white mx-auto text-center'}}) }}
+				</div>
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

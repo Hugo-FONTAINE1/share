@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}}
+	- Ajout thème
+{% endblock %}
+
+{% block body %}
+	{{parent()}}
+	<div class="container">
+		<div class="row justify-content-center">
+			<h1 class="text-center text-primary p-4">Ajout d'un thème
+			</h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 bg-white p-4 m-0 text-primary">
+				{{ form_start(form) }}
+				<div class="form-group">
+					{{ form_label(form.libelle, 'Libelle ', {'label_attr': {'class': 'font-weight-bold'}}) }}
+					{{ form_widget(form.libelle, {'attr': {'class': 'form-control'}}) }}
+				</div>
+				<div class="form-group mx-auto text-center">
+					{{ form_widget(form.envoyer, { 'label': "Envoyer", 'attr': {'class': 'btn font-weight-bold bg-primary text-white mx-auto text-center'}}) }}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{form_end(form) }}
+
+
+{% endblock %}

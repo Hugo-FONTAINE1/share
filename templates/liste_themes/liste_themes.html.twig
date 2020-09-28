@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}}
+	- Liste thèmes
+{% endblock %}
+
+{% block body %}
+	{{parent()}}
+	<div class="container">
+		<div class="row justify-content-center">
+			<h1 class="text-center text-primary p-4">Liste des thèmes
+			</h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 bg-white p-4 m-0 text-primary">
+				<div class="responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr class="table-info">
+								<th scope="row">Libelle :</th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+
+							{% for theme in themes %}
+								<tr class={{cycle(['table-active', 'table-primary'],loop.index0) }}>
+									<td>{{theme.libelle |capitalize }}</td>
+									<td>
+										<a href="{{path('modif_theme',{'id':theme.id})}}" class="text-white">
+											<span class="material-icons"  title="Modifier le thème">build</span>
+									</td>
+									<td></td>
+									<td>
+										<a href="{{path('liste_themes',{'supp':theme.id})}}" class="text-white">
+											<span class="material-icons"  title="Suprimmer le thème">delete</span>
+							{% endfor %}
+									</td>
+									
+								</tr>
+							</tbody>
+						</tbody>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div></div>{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}}Liste fichiers
+{% endblock %}
+
+{% block body %}
+	{{parent()}}
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<h1 class="text-center text-primary p-4">Liste des fichiers</h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-8 p-4 m-0 text-primary">
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th scope="col" class="font-weight-bold">Nom</th>
+								<th>Taille</th>
+								<th>Extension</th>
+								<th>Propriétaire</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for fichier in fichiers %}
+								<tr class="{{ cycle(['table-primary', 'table-secondary'], loop.index0) }}">
+									<td>
+										<a href="{{path('telechargement_fichier',{'id':fichier.id})}}">{{fichier.vrainom}}</a>
+									</td>
+									<td>{{fichier.taille}}</td>
+									<td>{{fichier.extension}}</td>
+									<td>{{fichier.utilisateur.prenom}}
+										{{fichier.utilisateur.nom}}</td>
+									<td>
+										<a href="{{path('liste_fichiers',{'supp':fichier.id})}}" class="text-white">
+											<span class="material-icons" title="Suprimmer le fichier">delete</span>
+										{% endfor %}
+									</td>
+								</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

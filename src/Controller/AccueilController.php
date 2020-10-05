@@ -31,7 +31,7 @@ class AccueilController extends AbstractController
                 // Envoyer un email                
                 $message = (new \Swift_Message($form->get('subject')->getData()))                        
                 ->setFrom($form->get('email')->getData())                        
-                ->setTo('theo.herbin59710@outlook.fr')                        
+                ->setTo('h.fontaine5962@gmail.com')                        
                 ->setBody($form->get('message')->getData());                
                 $mailer->send($message);
                 

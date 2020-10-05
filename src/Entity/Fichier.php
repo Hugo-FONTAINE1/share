@@ -50,6 +50,16 @@ class Fichier
      */
     private $telechargements;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $VraiNom;
+
     public function __construct()
     {
         $this->themes = new ArrayCollection();
@@ -61,12 +71,12 @@ class Fichier
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getNom()
     {
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
+    public function setNom( $nom)
     {
         $this->nom = $nom;
 
@@ -162,6 +172,30 @@ class Fichier
                 $telechargement->setFichier(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getVraiNom(): ?string
+    {
+        return $this->VraiNom;
+    }
+
+    public function setVraiNom(string $VraiNom): self
+    {
+        $this->VraiNom = $VraiNom;
 
         return $this;
     }

@@ -15,7 +15,8 @@ class AjoutThemeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('libelle',TextType::class)   
+        ->add('libelle',TextType::class)
+
         ->add('envoyer', SubmitType::class)
         ;
     }

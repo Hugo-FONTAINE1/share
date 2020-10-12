@@ -61,6 +61,29 @@ class UtilisateurController extends AbstractController
 }
 
 
+/**
+     * @Route("/profile_utilisateur", name="profile_utilisateur")
+     */
+    public function profileUtilisateur(int $id,Request $request)
+    {
+      $em=$this->getDoctrine();
+      $repoUtilisateur=$em->getRepository(Utilisateur::class);
+      $utilisateur=$repoUtilisateur->find($id);
+
+      $form = $this->createForm(ImageProfilType::class);
+
+      $path =$this->getParameter('profile_directory').'/defaut.png';
+      $data=file_get_contents($path)
+      $base64='data:image/png;base64,'.base64_encode($data);
+
+    return $this->render('profile_utilisateur/profile_utilisateur.html.twig', [
+      'utilisateur'=>$utilisateur
+      'form'=>$form->createView()
+      'base64'=>$base64
+  ]);
+}
+
+
 
 
 }

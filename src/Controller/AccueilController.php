@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use App\Form\InscrireType;
+use App\Form\InscriptionType;
 
 class AccueilController extends AbstractController
 {
@@ -51,12 +51,12 @@ class AccueilController extends AbstractController
      
     }
 /**
-     * @Route("/inscrire", name="inscrire")
+     * @Route("/inscription", name="inscription")
      */
-    public function inscrire(Request $request,  UserPasswordEncoderInterface $passwordEncoder)
+    public function inscription(Request $request,  UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
-        $form = $this->createForm(InscrireType::class, $user);
+        $form = $this->createForm(InscriptionType::class, $user);
 
         if ($request->isMethod('POST')) {            
             $form->handleRequest($request);            
@@ -75,12 +75,12 @@ class AccueilController extends AbstractController
                 
                 else{
                     $this->addFlash('notice', 'Erreur de mot de passe');
-                    return $this->redirectToRoute('inscrire');
+                    return $this->redirectToRoute('inscription');
                 }
             }
         }        
 
-        return $this->render('accueil/inscrire.html.twig', [
+        return $this->render('accueil/inscription.html.twig', [
            'form'=>$form->createView()
         ]);
     }

@@ -30,7 +30,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path("inscrire")}}">Inscription</a>
+							<a class="nav-link" href="{{path("inscription")}}">Inscription</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="{{path("contact")}}">Contact</a>
@@ -82,7 +82,7 @@
 										
 										{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
 											<li>
-												<a href="{{ path('inscrire') }}">S'inscrire</a>
+												<a href="{{ path('inscription') }}">S'inscrire</a>
 											</li>
 											<li>
 												<a href="{{ path('app_login') }}">Se connecter</a>

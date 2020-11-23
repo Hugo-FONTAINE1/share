@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 
-class InscrireType extends AbstractType
+class InscriptionType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -19,7 +19,7 @@ class InscrireType extends AbstractType
             ->add('email',EmailType::class)
             ->add('password',PasswordType::class)
             ->add('confirmation', PasswordType::class,['mapped'=>false])
-            ->add('inscrire',SubmitType::class)
+            ->add('inscription',SubmitType::class)
         ;
     }
 

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}}Inscription{% endblock %}
+
+{% block body %}
+{{parent()}}
+
+<div class="container-fluid">   
+        <div class="row justify-content-center">
+            <h1 class="text-center text-primary p-4">S'inscrire</h1>
+        </div>
+          <div class="row justify-content-center">
+           {{form(form)}}
+        </div>
+        
+
+</div>        
+
+{% endblock %}

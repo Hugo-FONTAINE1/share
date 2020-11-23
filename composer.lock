@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e548f5daab5d184383daeefc400ae254",
+    "content-hash": "a7286e59fadc2614ec32752ff48a10fa",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -5765,16 +5765,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v5.1.5",
+            "version": "v5.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "c761866b9aa13add16e6f7dec5f40ab85c2a3ad7"
+                "reference": "8921cdb1057f615b8340a352195f4a684c876893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/c761866b9aa13add16e6f7dec5f40ab85c2a3ad7",
-                "reference": "c761866b9aa13add16e6f7dec5f40ab85c2a3ad7",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/8921cdb1057f615b8340a352195f4a684c876893",
+                "reference": "8921cdb1057f615b8340a352195f4a684c876893",
                 "shasum": ""
             },
             "require": {
@@ -5817,11 +5817,6 @@
                 "twig/twig": "^2.10|^3.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Bundle\\SecurityBundle\\": ""
@@ -5847,7 +5842,7 @@
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-bundle/tree/5.1"
+                "source": "https://github.com/symfony/security-bundle/tree/v5.1.8"
             },
             "funding": [
                 {
@@ -5863,7 +5858,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-18T11:41:36+00:00"
+            "time": "2020-10-24T12:01:57+00:00"
         },
         {
             "name": "symfony/security-core",
@@ -8349,22 +8344,22 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.21.1",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "da629093c7bf9abd9a6a0f232a43bbb1b88de68d"
+                "reference": "ffaee624a20a462ec2da82942d3c9d8fc8dd1421"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/da629093c7bf9abd9a6a0f232a43bbb1b88de68d",
-                "reference": "da629093c7bf9abd9a6a0f232a43bbb1b88de68d",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/ffaee624a20a462ec2da82942d3c9d8fc8dd1421",
+                "reference": "ffaee624a20a462ec2da82942d3c9d8fc8dd1421",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.2",
                 "nikic/php-parser": "^4.0",
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/config": "^3.4|^4.0|^5.0",
                 "symfony/console": "^3.4|^4.0|^5.0",
                 "symfony/dependency-injection": "^3.4|^4.0|^5.0",
@@ -8416,7 +8411,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/maker-bundle/issues",
-                "source": "https://github.com/symfony/maker-bundle/tree/master"
+                "source": "https://github.com/symfony/maker-bundle/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -8432,7 +8427,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-29T18:05:46+00:00"
+            "time": "2020-10-28T15:35:16+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
